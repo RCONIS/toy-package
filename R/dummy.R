@@ -7,7 +7,7 @@
 #' @export
 #'
 #' @examples
-#' foo(1, 2)
-foo <- function(x, y) {
+#' dummy(1, 2)
+dummy <- function(x, y) {
   x + y
 }

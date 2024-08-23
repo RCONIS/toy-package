@@ -1,3 +1,3 @@
-test_that("multiplication works", {
-  expect_equal(2 * 2, 4)
+test_that("dummy works", {
+  expect_equal(dummy(2, 3), 5)
 })
