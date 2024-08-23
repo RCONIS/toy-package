@@ -38,6 +38,15 @@ jobs:
           extra-packages: any::covr, any::xml2
           needs: coverage
 
+      # Note: This can be done much better, e.g. not just overwriting files
+      # of the same name but appending their contents to the existing ones etc.
+      # Just for now it is ok.
+      - name: Add additional tests
+        run: |
+          cp additional-tests/tests/*.R tests/
+          cp additional-tests/tests/testthat/*.R tests/testthat/
+        shell: bash
+
       - name: Test coverage
         run: |
           cov <- covr::package_coverage(
