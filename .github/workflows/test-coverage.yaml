@@ -43,8 +43,8 @@ jobs:
       # Just for now it is ok.
       - name: Add additional tests
         run: |
-          cp additional-tests/tests/*.R tests/
-          cp additional-tests/tests/testthat/*.R tests/testthat/
+          find ./additional-tests/tests -maxdepth 1 -name \*.R -exec cp {} ./tests \;
+          find ./additional-tests/tests/testthat -maxdepth 1 -name \*.R -exec cp {} ./tests/testthat \;
         shell: bash
 
       - name: Test coverage
