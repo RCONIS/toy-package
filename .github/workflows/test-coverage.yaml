@@ -25,6 +25,7 @@ jobs:
         with:
           repository: 'RCONIS/toy-tests'
           ref: main
+          fetch-depth: 0
           ssh-key: ${{ secrets.SSH_PRIVATE_KEY }}
           path: 'additional-tests'
           sparse-checkout: |
